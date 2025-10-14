@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>Mohamed Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+                <span>Mohamed Gamal</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="index.html">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="Skills.html">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="Services.html">Services</a></div>
+                <div class="link contact-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="Contact.html">Contact Us</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="Skills.html">Skills</a>
+                <a href="Services.html">Services</a>
+                <a href="Contact.html">Contact Us</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="main-container">
+            <div class="image" data-aos="zoom-in-right" data-aos-duration="2500">
+                <img src="enhanced-image (1).png" alt="">
+            </div>
+            <div class="content">
+                <!-- Services Section -->
+                <div class="services" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1100">
+                    <h2>Services</h2>
+                    <div class="services-grid">
+                        <div class="service">
+                            <i class="fa-solid fa-code"></i> Full Stack Web Development
+                              <p style="margin-left:30px;">Building dynamic, scalable websites using .NET, Blazor, and modern frontend tools.</p>
+                        </div>
+                        <div class="service">
+                            <i class="fa-solid fa-database"></i> Database Design
+                              <p style="margin-left: 30px;">Designing and managing SQL Server databases with high performance and security.</pstyle="margin-left:10px;">
+                        </div>
+                        <div class="service">
+                            <i class="fa-solid fa-bug-slash"></i> Debugging & Optimization
+                              <p style="margin-left: 30px;">Fixing bugs and optimizing code to ensure smooth user experiences.</p>
+                        </div>
+                        <div class="service">
+                            <i class="fa-solid fa-gears"></i> API Integration
+                              <p style="margin-left: 30px;">Developing and consuming RESTful APIs for modern web apps.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+          AOS.init({offset:0});
+    </script>
+    <script>
+            function hamburg(){
+                const navbar = document.querySelector(".dropdown")
+                navbar.style.transform = "translateY(0px)"
+            }
+            function cancel(){
+                const navbar = document.querySelector(".dropdown")
+                navbar.style.transform = "translateY(-500px)"
+            }
+    </script>
+</body>
+</html>
